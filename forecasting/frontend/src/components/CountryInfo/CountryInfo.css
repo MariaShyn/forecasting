@@ -1,0 +1,77 @@
+.country-info {
+    padding: 70px 5%;
+}
+
+.country-info h1 {
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: normal;
+}
+
+.short-info {
+    display: flex;
+}
+
+.short-info__map {
+    width: 50%;
+}
+
+.short-info__text {
+    padding: 0 10px;
+    font-size: 19px;
+}
+
+.short-info__text h3 {
+    font-weight: normal;
+    margin: 0;
+}
+
+.info-item {
+    margin: 0 0 10px;
+}
+
+.info-item__header {
+    text-transform: capitalize;
+}
+
+.metrics {
+    margin-top: 40px;
+}
+
+.metrics-item {
+    width: 30%;
+    padding: 20px;
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
+    transition: all 0.1s;
+    cursor: pointer;
+}
+
+.metrics-item:hover {
+    -webkit-box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.5);
+}
+
+@media screen and (max-width: 767px) {
+    .short-info {
+        flex-wrap: wrap;
+    }
+
+    .short-info__map {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .metrics-item {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .metrics-item {
+        width: 40%;
+    }
+
+}

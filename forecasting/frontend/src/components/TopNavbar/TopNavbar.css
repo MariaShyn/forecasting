@@ -1,0 +1,15 @@
+.top-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 22px;
+    z-index: 100;
+}
+
+.top-navbar__link {
+    color: white;
+    text-decoration: none;
+}

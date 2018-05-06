@@ -1,0 +1,26 @@
+.country-forecast {
+    padding: 70px 5%;
+}
+
+.country-forecast h1 {
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: normal;
+}
+
+.metrics-info {
+    /*display: flex;*/
+}
+
+.metrics-info__header {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.metrics-info__text {
+    padding: 0 10px;
+}
+
+.chart-wrapper {
+    overflow: auto;
+}
