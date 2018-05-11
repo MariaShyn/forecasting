@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import TopNavbar from '../TopNavbar/TopNavbar';
-import GoogleMap from '../GoogleMap/GoogleMap';
+import TopNavbar from '../../components/TopNavbar/TopNavbar';
+import GoogleMap from '../../components/GoogleMap/GoogleMap';
 import { Link } from 'react-router-dom';
 
 import './CountryInfo.css';
@@ -58,10 +58,18 @@ class CountryInfo extends Component {
         const { currentArmaValues, metrics, activeCountry } = this.props;
         if (!currentArmaValues) return;
         return currentArmaValues.map((item) => {
-            const armaValue = CountryInfo.getObjectFromArray(metrics, 'id', item.metrics);
-            return (<Link to={`/forecast/${activeCountry.id}/${item.metrics}`} style={{color: "black", textDecoration: "none"}}>
+            const metricValue = CountryInfo.getObjectFromArray(metrics, 'id', item.metrics);
+            return (<Link to={`/forecast/${activeCountry.id}/${item.metrics}`} className='metrics-link'>
                 <div className="metrics-item">
-                    {armaValue.name}
+                    <div className="metrics-item__name">{metricValue.name}</div>
+                    <table style={{ width: '100%', textAlign: 'center' }}>
+                        <tbody>
+                        <tr>
+                            <td style={{ width: '50%', padding: '15px', borderRight: '1px solid rgba(0, 0, 0, 0.4)' }}>Measure: {metricValue.measure_units}</td>
+                            <td style={{ width: '50%', textTransform: 'capitalize', padding: '15px' }}>{metricValue.data_time_type}ly data</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </Link>);
             }
@@ -69,7 +77,7 @@ class CountryInfo extends Component {
     };
 
     render() {
-        const { coords, coords_marker    } = this.props.activeCountry;
+        const { coords, coords_marker } = this.props.activeCountry;
         return (
             <div className="country-info">
                 <TopNavbar />

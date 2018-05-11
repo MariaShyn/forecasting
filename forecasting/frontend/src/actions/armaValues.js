@@ -1,16 +1,19 @@
 import axios from 'axios';
 
-export const REQUEST_ARMAVALUES = 'REQUEST_ARMAVALUES';
+export const ARMA_VALUE_ACTION_CONSTANTS = {
+    REQUEST_ARMAVALUES: 'REQUEST_ARMAVALUES',
+    FETCH_ARMAVALUES: 'FETCH_ARMAVALUES',
+};
+
 function requestArmaValues() {
     return {
-        type: REQUEST_ARMAVALUES
+        type: ARMA_VALUE_ACTION_CONSTANTS.REQUEST_ARMAVALUES
     }
 }
 
-export const FETCH_ARMAVALUES = 'FETCH_ARMAVALUES';
 function fetchArmaValues(armaValues) {
     return {
-        type: FETCH_ARMAVALUES,
+        type: ARMA_VALUE_ACTION_CONSTANTS.FETCH_ARMAVALUES,
         armaValues
     }
 }

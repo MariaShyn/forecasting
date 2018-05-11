@@ -32,6 +32,7 @@ class Metrics(models.Model):
     name = models.CharField(max_length=100)
     short_name = models.CharField(max_length=45)
     measure_units = models.CharField(max_length=10)
+    data_time_type = models.CharField(max_length=45)
 
     class Meta:
         managed = False

@@ -6,7 +6,10 @@
     padding: 15px 25px;
     background-color: rgba(0, 0, 0, 0.5);
     font-size: 22px;
-    z-index: 100;
+    z-index: 1500;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
 }
 
 .top-navbar__link {

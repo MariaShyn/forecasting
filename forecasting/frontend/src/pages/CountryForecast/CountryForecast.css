@@ -1,0 +1,72 @@
+.country-forecast {
+    padding: 70px 5%;
+}
+
+.country-forecast h1 {
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: normal;
+}
+
+.metrics-info {
+    /*display: flex;*/
+}
+
+.metrics-info__header {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.metrics-info__text {
+    padding: 0 10px;
+}
+
+.chart-wrapper {
+    overflow: auto;
+}
+
+.get-forecast-button {
+    background-color: #98b7d6;
+    border: none;
+    outline: none;
+    padding: 10px 17px;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
+    transition: all 0.1s;
+}
+
+.get-forecast-button:hover {
+    -webkit-box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.5);
+}
+
+.get-forecast-input {
+    width: 38px;
+    height: 20px;
+    font-size: 20px;
+    outline: none;
+    padding: 3px;
+}
+
+.shadow-text {
+    text-shadow: 1px 1px 1px #222;
+}
+
+.get-forecast-input-wrapper {
+    width: 137px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.metrics-info__warning {
+    color: #7f0000;
+    text-shadow: 1px 1px 1px #7f0000;
+}

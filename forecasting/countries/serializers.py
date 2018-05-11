@@ -35,6 +35,7 @@ class MetricsSerializer(serializers.ModelSerializer):
             'id',
             'name',
             'short_name',
-            'measure_units'
+            'measure_units',
+            'data_time_type'
         )
 

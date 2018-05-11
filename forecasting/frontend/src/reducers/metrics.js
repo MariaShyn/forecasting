@@ -1,6 +1,5 @@
 import {
-    FETCH_METRICS,
-    FETCH_VALUES_FOR_METRICS
+    METRICS_ACTION_CONSTANTS
 } from '../actions/metrics'
 
 const initialState = {
@@ -11,9 +10,9 @@ const initialState = {
 
 export default function countries(state=initialState, action) {
     switch (action.type) {
-        case FETCH_METRICS:
+        case METRICS_ACTION_CONSTANTS.FETCH_METRICS:
             return {...state, metrics: action.metrics};
-        case FETCH_VALUES_FOR_METRICS:
+        case METRICS_ACTION_CONSTANTS.FETCH_VALUES_FOR_METRICS:
             return {...state, valuesForMetrics: action.values};
         default:
             return state;

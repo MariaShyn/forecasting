@@ -1,16 +1,21 @@
 import axios from 'axios';
 
-export const REQUEST_COUNTRIES = 'REQUEST_COUNTRIES';
+export const COUNTRIES_ACTION_CONSTANTS = {
+    REQUEST_COUNTRIES: 'REQUEST_COUNTRIES',
+    FETCH_COUNTRIES: 'FETCH_COUNTRIES',
+    REQUEST_COUNTRY_BY_ID: 'REQUEST_COUNTRY_BY_ID',
+    FETCH_COUNTRY_BY_ID: 'FETCH_COUNTRY_BY_ID',
+};
+
 function requestCountries() {
     return {
-        type: REQUEST_COUNTRIES
+        type: COUNTRIES_ACTION_CONSTANTS.REQUEST_COUNTRIES
     }
 }
 
-export const FETCH_COUNTRIES = 'FETCH_COUNTRIES';
 function fetchCountries(countries) {
     return {
-        type: FETCH_COUNTRIES,
+        type: COUNTRIES_ACTION_CONSTANTS.FETCH_COUNTRIES,
         countries
     }
 }
@@ -28,23 +33,21 @@ export function getCountries() {
     }
 }
 
-export const REQUEST_COUNTRY_BY_ID = 'REQUEST_COUNTRY_BY_ID';
 function requestCountryById() {
     return {
-        type: REQUEST_COUNTRY_BY_ID
+        type: COUNTRIES_ACTION_CONSTANTS.REQUEST_COUNTRY_BY_ID
     }
 }
 
-export const FETCH_COUNTRY_BY_ID = 'FETCH_COUNTRY_BY_ID';
 function fetchCountryById(country) {
     return {
-        type: FETCH_COUNTRY_BY_ID,
+        type: COUNTRIES_ACTION_CONSTANTS.FETCH_COUNTRY_BY_ID,
         country
     }
 }
 
 export function getCountryById(id) {
-    return function (dispatch) {
+    return (dispatch) => {
         dispatch(requestCountryById());
 
         return axios

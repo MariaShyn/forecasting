@@ -1,6 +1,5 @@
 import {
-    FETCH_COUNTRIES,
-    FETCH_COUNTRY_BY_ID
+    COUNTRIES_ACTION_CONSTANTS
 } from '../actions/countries'
 
 const initialState = {
@@ -11,9 +10,9 @@ const initialState = {
 
 export default function countries(state=initialState, action) {
     switch (action.type) {
-        case FETCH_COUNTRIES:
+        case COUNTRIES_ACTION_CONSTANTS.FETCH_COUNTRIES:
             return {...state, countries: action.countries};
-        case FETCH_COUNTRY_BY_ID:
+        case COUNTRIES_ACTION_CONSTANTS.FETCH_COUNTRY_BY_ID:
             return {...state, activeCountry: action.country};
         default:
             return state;

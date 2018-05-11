@@ -1,5 +1,5 @@
 import React from 'react';
-import TopNavbar from './TopNavbar/TopNavbar';
+import TopNavbar from '../../components/TopNavbar/TopNavbar';
 
 const NotFound = () => {
   return (
